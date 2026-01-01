@@ -662,11 +662,97 @@ html {
 .bottom-icons a { color: #5a8fb9; font-size: 1.2rem; transition: 0.3s; }
 .bottom-icons a:hover { transform: scale(1.2); color: var(--text-main); }
 
-/* للموبايل */
-@media (max-width: 900px) {
-    .footer-container { grid-template-columns: 1fr 1fr; }
+/* ======================================================
+   تعديلات الاستجابة (Responsive Design) 📱 Tablet & Mobile
+   ====================================================== */
+
+/* 1. تعديلات لشاشة الآيباد والتابلت (أقل من 992px) */
+@media (max-width: 992px) {
+    .websites-grid {
+        grid-template-columns: repeat(2, 1fr); /* كرتين جنب بعض بدال 3 */
+    }
+    .footer-container {
+        grid-template-columns: 1fr 1fr; /* تقسيم الفوتر لعمودين */
+    }
 }
-@media (max-width: 600px) {
-    .footer-container { grid-template-columns: 1fr; padding: 0 20px; }
-    .footer-bottom { flex-direction: column; gap: 15px; text-align: center; padding: 25px 20px; }
+
+/* 2. تعديلات الموبايل (أقل من 768px) - أهم جزء */
+@media (max-width: 768px) {
+    /* تصغير العناوين الكبيرة */
+    .hero h1 { font-size: 2.2rem; }
+    .page-title { font-size: 1.8rem; }
+
+    /* تحويل شبكة المعلومات (ID, Course, etc.) لعمود واحد */
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- تعديل التايم لاين (الفعاليات) للموبايل --- */
+    .timeline-line {
+        left: 30px; /* نقل الخط لأقصى اليسار */
+        transform: none;
+    }
+
+    .timeline-item {
+        width: 100% !important; /* الكرت بياخد العرض كامل */
+        left: 0 !important;
+        padding-left: 60px !important; /* مسافة عشان الخط اللي صار عاليسار */
+        padding-right: 20px !important;
+        text-align: left !important; /* الكلام يبدأ من اليسار */
+    }
+
+    /* سنترة محتوى الكرت في الموبايل بما يتناسب مع الخط الجانبي */
+    .activity-card {
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .activity-card p {
+        text-align: left;
+    }
+
+    /* تعديل مكان النقطة (الدائرة) لتصبح فوق الخط الجانبي */
+    .timeline-item::after {
+        left: 22px !important;
+        right: auto !important;
+        top: 50px;
+    }
+
+    /* شبكة المواقع تصير عمود واحد */
+    .websites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* الفوتر يصير عمود واحد */
+    .footer-container {
+        grid-template-columns: 1fr;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .footer-col {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .social-links-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 3. تعديلات للموبايلات الصغيرة جداً (أقل من 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 15px 20px;
+    }
+    nav ul {
+        gap: 15px;
+    }
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+    .main-container-card {
+        padding: 25px 15px;
+    }
 }
