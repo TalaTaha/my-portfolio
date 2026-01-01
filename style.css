@@ -1,0 +1,672 @@
+:root {
+    --bg-color: #f4f4f7;
+    --text-main: #2c3e50;
+    --text-muted: #7f8c8d;
+    --card-bg: #ffffff;
+    --accent-blue: #9eb6cc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(rgba(238, 242, 243, 0.8), rgba(220, 229, 237, 0.8)), 
+                      url('images/background.png'); 
+    
+    background-size: cover;     
+    background-position: center;  
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    color: var(--text-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navigation */
+header {
+    width: 100%;
+    padding: 20px 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    color: var(--text-main);
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    width: 90%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* Hero Section */
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.hero h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-main);
+    margin-bottom: 15px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* Profile Image Section */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.profile-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    padding: 6px;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Info Cards Grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.icon-box {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.blue-icon { background-color: #e3effa; color: #5a8fb9; }
+.dark-blue-icon { background-color: #d1e3f3; color: #3a6b8f; }
+.light-blue-icon { background-color: #ebf5ff; color: #78a9cf; }
+
+.info-text .label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.info-text .value {
+    font-weight: 500;
+    color: var(--text-main);
+}
+
+/* Quote Section */
+.quote-section {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.author {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+}
+
+.cv-button {
+    background-color: var(--accent-blue);
+    color: white;
+    border: none;
+    padding: 12px 50px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cv-button:hover {
+    background-color: #8da4b9;
+    transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* --- Homework Page Unified Style --- */
+
+/* الكرت الأبيض الكبير */
+/* --- Homework Page Unified Style --- */
+
+/* الكرت الأبيض الكبير */
+.main-container-card {
+    background: rgba(255, 255, 255, 0.95);
+    max-width: 750px;
+    
+    /* 🎯 هاد السطر هو اللي بوسط الكرت وببعده عن اللي فوقه */
+    margin: 100px auto 50px auto; 
+    
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+    text-align: left;
+    
+    /* ⚓ هاد السطر عشان لما تعملي Scroll ما يلزق العنوان بحفة الشاشة */
+    scroll-margin-top: 80px; 
+}
+
+/* 🌀 ضيفي هاد السطر في أول الملف (تحت الـ :root) عشان النزلة تكون ناعمة */
+html {
+    scroll-behavior: smooth;
+}
+
+/* الترويسة داخل الكرت */
+.assignment-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.folder-main-icon {
+    color: #9eb6cc; /* لون متناسق مع ثيمك الأصلي */
+    font-size: 2rem;
+}
+
+.assignment-header h2 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* البادج الرمادي (Research) */
+.research-badge {
+    background: #f4f4f7;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+/* الفاصل */
+.card-line {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+/* قائمة الملفات */
+.list-label {
+    color: #9eb6cc;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.files-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* سطر الملف الواحد */
+.file-row-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.file-row-item:hover {
+    background: #fcfcfc;
+}
+
+/* الأيقونات */
+.word-icon-blue { color: #2b579a; font-size: 1.3rem; }
+.pdf-icon-red { color: #e74c3c; font-size: 1.3rem; }
+.link-icon-grey { color: #7f8c8d; font-size: 1.3rem; }
+
+/* نص الرابط */
+.file-link-name {
+    color: #2b579a; /* لون أزرق للرابط */
+    text-decoration: underline;
+    font-size: 1rem;
+}
+
+/* تضبيط العنوان الخارجي */
+.page-title {
+    margin-bottom: 40px !important;
+}
+/* نص الرابط - التعديل الجديد */
+.file-link-name {
+    color: var(--text-main); /* هيك بياخد نفس لون الخط الغامق تبع الموقع */
+    text-decoration: none;   /* هاد السطر السحري اللي بيشيل الخط اللي تحت الكلام */
+    font-size: 1rem;
+}
+
+/* وعشان يضل شكله مرتب لما تمري بالماوس فوقه */
+.file-row-item:hover .file-link-name {
+    color: var(--accent-blue); /* هيك بغير لونه لدرجة أزرق خفيفة بس لما تحطي الماوس عليه */
+}
+
+
+/*website area */
+
+/* --- Websites Section Styles --- */
+
+.websites-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+    scroll-margin-top: 80px; /* عشان السكول يوقف بمكان صح */
+}
+
+.websites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 أعمدة */
+    gap: 30px;
+}
+
+.web-card {
+    background: rgba(255, 255, 255, 0.4); /* تأثير زجاجي شفاف */
+    backdrop-filter: blur(10px);        /* تغبيش الخلفية وراء الكرت */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(158, 182, 204, 0.2);
+    transition: 0.3s ease;
+}
+
+.web-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.web-img-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #9eb6cc;
+}
+
+.web-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* أيقونة لينكد إن اللي فوق الصورة */
+.img-ln-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #0077b5;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.web-card h3 {
+    color: #5a8fb9;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.web-card p {
+    font-size: 0.9rem;
+    color: #2c3e50;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    height: auto;      /* ✅ هيك الكلام بياخد راحته وبوسع شو ما كان طويل */
+    min-height: 80px;  /* اختياري: عشان لو الكلام قليل المربعات تضل متناسقة */
+}
+
+/* أيقونة لينكد إن اللي تحت */
+.footer-ln-icon {
+    background: #0077b5;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.footer-ln-icon:hover {
+    background: #005582;
+    transform: scale(1.1);
+}
+
+/* تضبيط للموبايل */
+@media (max-width: 900px) {
+    .websites-grid {
+        grid-template-columns: 1fr;
+    }
+    .web-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* --- Activities Timeline Style --- */
+.timeline-container {
+    padding: 80px 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    scroll-margin-top: 80px;
+}
+
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+/* الخط العمودي اللي بالنص زي صورة Our Events */
+.timeline-line {
+    position: absolute;
+    width: 3px;
+    background: var(--accent-blue);
+    top: 0; bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+}
+
+.timeline-item {
+    padding: 20px 50px;
+    position: relative;
+    width: 50%; /* بياخد نص العرض */
+}
+
+/* توزيع الكروت يمين ويسار */
+.timeline-item.left { left: 0; text-align: right; }
+.timeline-item.right { left: 50%; text-align: left; }
+
+/* الدوائر الصغيرة على الخط */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px; height: 16px;
+    background: white;
+    border: 3px solid var(--accent-blue);
+    top: 60px;
+    border-radius: 50%;
+    z-index: 2;
+}
+.left::after { right: -10px; }
+.right::after { left: -10px; }
+
+/* تنسيق كرت النشاط الواحد */
+.activity-card {
+    display: flex;             /* تفعيل نظام الطبقات */
+    flex-direction: column;    /* ترتيب العناصر فوق بعض */
+    align-items: center;       /* سنترة كل شي بالعرض (صورة، عنوان، نص) */
+    
+    /* باقي الكود اللي عندك بضل زي ما هو */
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    transition: 0.4s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.activity-img-container {
+    width: 100%;           /* العرض كامل داخل الكرت */
+    height: 180px;         /* 🎯 هاد السطر هو السر: وحدنا الارتفاع لكل الصور */
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9; /* لون خفيف يظهر لو الصورة تأخرت بالتحميل */
+}
+
+.activity-img-container img {
+    width: 100%;
+    height: 100%;          /* إجبار الصورة توخذ كامل ارتفاع الحاوية */
+    object-fit: cover;     /* 👈 هاد أهم أمر: بقص الزوائد وبحافظ على أبعاد الصورة صحيحة */
+    object-position: center; /* سنترة الصورة في النص */
+    display: block;
+}
+.activity-card h3 { color: #5a8fb9; margin-bottom: 10px; font-size: 1.2rem; }
+/* 3. سنترة الفقرة (p) عشان تضمنيها 100% */
+.activity-card p {
+    text-align: center; /* سنترة أسطر الفقرة */
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* --- Scroll Animation (Reveal) --- */
+.reveal {
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+/* حركة الدخول من الجوانب */
+.timeline-item.left { left: 0; text-align: center; }
+.timeline-item.right { left: 50%; text-align: center; }
+
+.reveal.active {
+    opacity: 1;
+    transform: translateX(0) !important;
+}
+/* --- Footer Styles --- */
+/* --- Footer Styles (Full Width Version) --- */
+
+/* 1. الحاوية الخارجية: ماخدة عرض الشاشة كامل */
+.main-footer {
+    width: 100%;          /* 🎯 أهم تعديل: عرض كامل */
+    margin-top: 100px;    /* مسافة من فوق بس */
+    
+    /* الستايل الزجاجي */
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(15px);        
+    border-top: 1px solid rgba(255, 255, 255, 0.6); /* إطار من فوق بس */
+    
+    padding: 60px 0 0 0; /* بادينج داخلي من فوق */
+    scroll-margin-top: 100px;
+}
+
+/* 2. حاوية المحتوى العلوي: مسنترة بالنص */
+.footer-container {
+    /* 🎯 هدول السطرين عشان المحتوى يضل ملموم بالنص وما يفرط عالأطراف */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr; 
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-col h3 {
+    color: var(--text-main);
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+/* عمود التعريف */
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #5a8fb9;
+    margin-bottom: 20px;
+}
+
+.about-col p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+}
+
+/* عمود الروابط */
+.links-col ul { list-style: none; }
+.links-col ul li { margin-bottom: 12px; }
+.links-col ul li a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+.links-col ul li a i { font-size: 0.7rem; margin-right: 8px; color: var(--accent-blue); }
+.links-col ul li a:hover { color: #5a8fb9; transform: translateX(5px); display: inline-block; }
+
+/* عمود التواصل */
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.icon-blue { color: #5a8fb9; font-size: 1.1rem; }
+
+/* عمود السوشيال ميديا */
+.social-links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.social-btn {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+.social-btn:hover { color: #5a8fb9; }
+
+/* 3. الشريط السفلي: مسنتر بالنص كمان */
+.footer-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    
+    /* 🎯 نفس فكرة اللي فوق، عشان يضل ملموم */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 40px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p { font-size: 0.85rem; color: var(--text-muted); }
+
+.bottom-icons { display: flex; gap: 15px; }
+.bottom-icons a { color: #5a8fb9; font-size: 1.2rem; transition: 0.3s; }
+.bottom-icons a:hover { transform: scale(1.2); color: var(--text-main); }
+
+/* للموبايل */
+@media (max-width: 900px) {
+    .footer-container { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+    .footer-container { grid-template-columns: 1fr; padding: 0 20px; }
+    .footer-bottom { flex-direction: column; gap: 15px; text-align: center; padding: 25px 20px; }
+}
